@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 5px;
+            text-align: left;    
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <form action="#"  method="action_page">
+            <tr>
+                <th colspan="2" style="text-align: center;">Pizza Shop 2.0</th>
+            </tr>
+            <tr>
+                <th rowspan="1">Name</th>
+                <td><input type="text" name="name"></input></td>
+            </tr>
+            <tr>
+                <th rowspan="3">Pizza Topping</th>
+                <td><input type="radio" name="topping" value="supreme">Supreme</input></td>
+              </tr>
+              <tr>
+                <td><input type="radio" name="topping" value="vegetarian">Vegetarian</input></td>
+              </tr>
+              <tr>
+                <td><input type="radio" name="topping" value="hawaiian">Hawaiian</input></td>
+            </tr>
+            <tr>
+                <th rowspan="1">Pizza Sauce</th>
+                <td>
+                    <select name="sauce">
+                        <option value="tomato">Tomato</option>
+                        <option value="barbeque">Barbeque</option>
+                        <option value="mayonnaise">Mayonnaise</option>
+                        <option value="secret">Secret Sauce</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th rowspan="1">Option Extras</th>
+                <td>
+                    <input type="checkbox" name="extras" value="extra_cheese">Extra Cheese</input>
+                    <input type="checkbox" name="extras" value="gluten_free">Gluten Free Base</input>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">Delivery Instructions<br><textarea name="delivery" cols="50" rows="4"></textarea></th>
+            </tr>
+            <tr>
+                <th colspan="2"><input type="submit" value="Send my Order"></th>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>

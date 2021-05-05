@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex08</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        body {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        header {
+            background-color: rgba(91, 91, 199, 0.8);
+            height: 10vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        .navigation {
+            display: flex;
+            /* flex-flow: row wrap; */
+            /* justify-content: flex-end; */
+
+            list-style: none;
+            margin: 0;
+            background: deepskyblue;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            display: block;
+            padding: 0.5em;
+            color: white;
+        }
+
+        .navigation a:hover {
+            background: #1565C0;
+        }
+
+        @media all and (max-width: 800px) {
+            .navigation {
+                justify-content: space-around;
+            }
+        }
+
+        @media all and (max-width: 600px) {
+            .navigation {
+                flex-flow: column wrap;
+                padding: 0;
+            }
+
+            .navigation a {
+                text-align: center;
+                padding: 10px;
+                border-top: 1px solid rgba(255, 255, 255, 0.3);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .navigation li:last-of-type a {
+                border-bottom: none;
+            }
+        }
+
+        main {
+            background-image: url(http://picsum.photos/id/1015/1200);
+            height: 80vh;
+            display: flex;
+        }
+
+        main>* {
+            /* outline: 1px dashed lime; */
+            flex: 1;
+        }
+
+        .main-C {
+            flex-grow: 5;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: gold
+        }
+
+        .main-L {
+            background-color: rgba(238, 130, 138, 0.527);
+        }
+
+        .main-R {
+            background-color: rgba(238, 130, 138, 0.527);
+        }
+
+        footer {
+            background-color: rgba(91, 91, 199, 0.8);
+            height: 10vh;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="main-L"></div>
+        <div class="main-C">
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita totam quisquam explicabo unde harum!
+                Iure iusto adipisci labore a, repudiandae rerum doloribus facere ab nam in dolorum mollitia debitis
+                doloremque, deserunt, dolorem ipsa? Suscipit minima officiis repudiandae cumque assumenda placeat ipsam
+                explicabo eum autem ad? Neque officia voluptas perferendis ullam.</p>
+        </div>
+        <div class="main-R"></div>
+    </main>
+    <footer>Footer</footer>
+</body>
+
+</html>

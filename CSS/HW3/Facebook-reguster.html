@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook - เข้าสู่ระบบหรือสมัครใช้งาน</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        /* background: #f0f2f5; */
+        color: #1c1e21;
+        direction: ltr;
+        line-height: 1.34;
+        height: 110vh;
+      }
+
+      div {
+        font-family: inherit;
+      }
+
+      .background {
+        background: #f0f2f5;
+        margin-top: 0;
+        padding-top: 72px;
+        padding-bottom: 112px;
+        height: 720px;
+      }
+
+      .containner {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        padding: 20px 0;
+        position: relative;
+        width: 980px;
+      }
+
+      .box1 {
+        display: inline-block;
+        width: 580px;
+        height: 266.8px;
+      }
+
+      .box2 {
+        height: 456px;
+        padding-bottom: 24px;
+        padding-top: 10px;
+      }
+
+      .input_box {
+        text-align: center;
+        background-color: #fff;
+        border: none;
+        border-radius: 8px;
+        width: 396px;
+        height: 352.6px;
+        margin: 40px 0 0;
+        padding: 20px 0 28px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      .fb_logo {
+        padding: 112px 0 16px;
+      }
+
+      .text1 {
+        font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+        font-size: 30px;
+        font-weight: normal;
+        line-height: 32px;
+        width: 500px;
+      }
+
+      input[type="text"] {
+        font-size: 19px;
+        padding: 14px 16px;
+        width: 330px;
+        border-radius: 6px;
+        border: 1px solid #dddfe2;
+      }
+
+      input[type="password"] {
+        font-size: 19px;
+        padding: 14px 16px;
+        width: 330px;
+        border-radius: 6px;
+        border: 1px solid #dddfe2;
+        margin: 12px;
+      }
+
+      .botton {
+        color: white;
+        background-color: #1877f2;
+        border: none;
+        border-radius: 6px;
+        font-size: 22px;
+        line-height: 48px;
+        padding: 0 16px;
+        width: 332px;
+        font-weight: bold;
+        font-family: inherit;
+      }
+
+      .line {
+        align-items: center;
+        border-bottom: 1px solid #dadde1;
+        display: flex;
+        margin: 20px 16px;
+        text-align: center;
+      }
+
+      .register {
+        border: none;
+        border-radius: 6px;
+        font-size: 19px;
+        line-height: 48px;
+        padding: 0 16px;
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        background-color: #42b72a;
+        font-weight: bold;
+      }
+
+      .bottom-box {
+        margin-top: 28px;
+        text-align: center;
+        color: #1c1e21;
+        font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        padding-top: 0;
+      }
+
+      .footer {
+        display: flex;
+        flex-direction: column;
+        color: #737373;
+        margin: 0 auto;
+        width: 980px;
+      }
+
+      .footer {
+        padding-top: 8px;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .list {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 8px;
+        margin: 0;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 14px;
+      }
+
+      a {
+        padding-left: 10px;
+        text-decoration: none;
+      }
+
+      .forgot {
+        margin-top: 16px;
+        text-align: center;
+      }
+
+      @media (max-width: 990px) {
+        .containner {
+          flex-direction: column;
+          align-items: center;
+          height: auto;
+          width: auto;
+        }
+
+        .box1 {
+          display: inline-block;
+          text-align: center;
+          width: auto;
+          height: auto;
+        }
+
+        .box2 {
+          display: inline-block;
+          text-align: center;
+          width: auto;
+          height: auto;
+        }
+
+        .fb_logo {
+          padding: 0;
+          width: auto;
+        }
+
+        .text1 {
+          width: auto;
+        }
+
+        .footer {
+          width: auto;
+        }
+
+        .background {
+          padding-top: 12px;
+          padding-bottom: 112px;
+          height: 720px;
+        }
+      }
+
+      @media (max-width: 426px) {
+        .background {
+          padding-top: 12px;
+          padding-bottom: 112px;
+          height: 500px;
+        }
+        .text1 {
+          font-size: 16px;
+        }
+
+        .input_box {
+          width: 264px;
+          height: 250px;
+        }
+
+        input[type="text"] {
+          font-size: 12px;
+          padding: 9.3px 10.7px;
+          width: 220px;
+          border-radius: 4px;
+        }
+
+        input[type="password"] {
+          font-size: 12px;
+          padding: 9.3px 10.7px;
+          width: 220px;
+          border-radius: 4px;
+          border: 1px solid #dddfe2;
+          margin: 8px;
+        }
+
+        .botton {
+          border-radius: 4px;
+          font-size: 14.7px;
+          line-height: 32px;
+          padding: 0 10.7px;
+          width: 221.33px;
+          font-weight: bold;
+          font-family: inherit;
+        }
+
+        .forgot {
+          margin-top: 10.7px;
+          text-align: center;
+        }
+
+        .line {
+          margin: 13.33px 10.7px;
+        }
+
+        .register {
+          border-radius: 4px;
+          font-size: 12.7px;
+          line-height: 32px;
+          padding: 0 10.7px;
+        }
+
+        .bottom-box {
+          margin-top: 18.7px;
+          font-size: 10.7px;
+        }
+
+        .list {
+          padding-top: 5.3px;
+          margin: 0;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 9.3px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="background">
+      <div class="containner">
+        <div class="box1">
+          <div class="fb_logo">
+            <img
+              style="margin: -28px; height: 106px"
+              src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"
+              alt="Facebook"
+            />
+          </div>
+          <h2 class="text1">
+            Facebook ช่วยคุณเชื่อมต่อและแชร์กับผู้คนมากมายรอบตัวคุณ
+          </h2>
+        </div>
+        <div class="box2">
+          <div class="input_box">
+            <div>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="อีเมลหรือหมายเลขโทรศัพท์มือถือ"
+              />
+              <input
+                type="password"
+                name="pass"
+                id="pass"
+                placeholder="รหัสผ่าน"
+              />
+            </div>
+            <div style="padding-top: 6px">
+              <input class="botton" type="button" value="เข้าสู่ระบบ" />
+            </div>
+            <div class="forgot">
+              <a style="text-decoration: none" href="#"
+                >ลืมรหัสผ่านใช่หรือไม่</a
+              >
+            </div>
+            <div class="line"></div>
+            <div>
+              <a class="register" href="#">สร้างบัญชีใหม่</a>
+            </div>
+          </div>
+          <div class="bottom-box">
+            <a
+              href="#"
+              style="text-decoration: none; font-weight: bold; color: #1c1e21"
+              >สร้างเพจ</a
+            >
+            สำหรับบุคคลมีชื่อเสียง วงดนตรี หรือธุรกิจ
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div>
+        <ul class="list">
+          <li><a href="#" title="ภาษาไทย">ภาษาไทย</a></li>
+          <li><a href="#" title="English (UK)">English (UK)</a></li>
+          <li><a href="#" title="Japanese">日本語</a></li>
+          <li><a href="#" title="Simplified Chinese (China)">中文(简体)</a></li>
+          <li><a href="#" title="Vietnamese">Tiếng Việt</a></li>
+          <li><a href="#" title="French (France)">Français (France)</a></li>
+          <li><a href="#" title="German">Deutsch</a></li>
+          <li><a href="#" title="Russian">Русский</a></li>
+          <li><a href="#" title="Spanish">Español</a></li>
+          <li>
+            <a href="#" title="Portuguese (Brazil)">Português (Brasil)</a>
+          </li>
+          <li><a href="#" title="Italian">Italiano</a></li>
+        </ul>
+        <div class="line" style="margin: 0 0 8px; padding-top: 8px"></div>
+      </div>
+      <div>
+        <ul class="list" style="padding-top: 0">
+          <li><a href="#" title="สมัครใช้งาน Facebook">สมัคร</a></li>
+          <li><a href="#" title="เข้าสู่ระบบ Facebook">เข้าสู่ระบบ</a></li>
+          <li><a href="#" title="เข้าไปดู Messenger">Messenger</a></li>
+          <li>
+            <a href="#" title="Facebook Lite สำหรับ Android">Facebook Lite</a>
+          </li>
+          <li><a href="#" title="เลือกดูวิดีโอ Watch ของเรา"> Watch </a></li>
+          <li><a href="#" title="เรียกดูไดเรกทอรีคนของเรา">ผู้คน</a></li>
+          <li><a href="#" title="เรียกดูไดเรกทอรีเพจของเรา">เพจ</a></li>
+          <li><a href="#">หมวดหมู่เพจ</a></li>
+          <li>
+            <a href="#" title="ดูสถานที่ที่กำลังเป็นที่นิยมบนเฟซบุ๊ค"
+              >สถานที่</a
+            >
+          </li>
+          <li><a href="#" title="ลองเล่นเกมบน Facebook">เกม</a></li>
+          <li>
+            <a href="#" title="เรียกดูไดเรกทอรีสถานที่">ตำแหน่งที่ตั้ง</a>
+          </li>
+          <li>
+            <a href="#" title="ซื้อและขายสินค้าบน Facebook Marketplace"
+              >Marketplace</a
+            >
+          </li>
+          <li>
+            <a href="#" title="เรียนรู้เพิ่มเติมเกี่ยวกับ Facebook Pay"
+              >Facebook Pay</a
+            >
+          </li>
+          <li><a href="#" title="เรียกดูไดเรกทอรีกลุ่มของเรา">กลุ่ม</a></li>
+          <li><a href="#" title="สมัครและรับสมัครงานบน Facebook">งาน</a></li>
+          <li>
+            <a href="#" title="เรียนรู้เพิ่มเติมเกี่ยวกับ Oculus">Oculus</a>
+          </li>
+          <li>
+            <a href="#" title="เรียนรู้เพิ่มเติมเกี่ยวกับ Portal from Facebook"
+              >Portal</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              title="ลองดู Instagram"
+              target="_blank"
+              rel="nofollow"
+              data-lynx-mode="asynclazy"
+              >Instagram</a
+            >
+          </li>
+          <li>
+            <a href="#" title="ดูไดเรกทอรีรายการ Local ของเรา">ในพื้นที่</a>
+          </li>
+          <li>
+            <a href="#" title="บริจาคให้กับการกุศลที่น่ายกย่อง"
+              >โครงการระดมทุน</a
+            >
+          </li>
+          <li>
+            <a href="#" title="ดูไดเรกทอรีบริการ Facebook ของเรา">บริการ</a>
+          </li>
+          <li>
+            <a href="#" title="ดูศูนย์ข้อมูลการลงคะแนนเสียง"
+              >ศูนย์ข้อมูลการลงคะแนนเสียง</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              title="อ่านเว็บบล็อกของเรา สำรวจศูนย์รวมแหล่งข้อมูล และค้นหาโอกาสในการจ้างงาน"
+              >เกี่ยวกับ</a
+            >
+          </li>
+          <li><a href="#" title="ลงโฆษณาบน Facebook">สร้างโฆษณา</a></li>
+          <li><a href="#" title="สร้างเพจ">สร้างเพจ</a></li>
+          <li><a href="#" title="พัฒนาบนแพลตฟอร์มของเรา">ผู้พัฒนา</a></li>
+          <li>
+            <a
+              href="#"
+              title="ก้าวหน้าไปอีกขั้นในหน้าที่การงานของคุณด้วยการมาร่วมงานกับบริษัทที่ยอดเยี่ยมของเรา"
+              >ร่วมงานกับ Facebook</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              title="เรียนรู้เกี่ยวกับความเป็นส่วนตัวของคุณและ Facebook"
+              >ความเป็นส่วนตัว</a
+            >
+          </li>
+          <li>
+            <a href="#" title="เรียนรู้เกี่ยวกับคุกกี้และ Facebook">คุกกี้</a>
+          </li>
+          <li>
+            <a href="#" title="เรียนรู้เกี่ยวกับตัวเลือกโฆษณา">ตัวเลือกโฆษณา</a>
+          </li>
+          <li><a href="#" title="อ่านข้อกำหนดและนโยบายของเรา">เงื่อนไข</a></li>
+          <li>
+            <a href="#" title="ไปที่ศูนย์ช่วยเหลือของเรา">ความช่วยเหลือ</a>
+          </li>
+          <li>
+            <a href="#" title="ดูและแก้ไขการตั้งค่า Facebook ของคุณ"
+              >การตั้งค่า</a
+            >
+          </li>
+          <li><a href="#" title="ดูบันทึกกิจกรรมของคุณ">บันทึกกิจกรรม</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Homework2</title>
+    <style>
+        body{ padding: 0;margin: 0;height: 200vh;}
+        .big{ width: 50%; height: 50%;}
+        .small{ width: 25%; height: 25%;}
+        .inside{ width: 10%; height: 10%;}
+        .absolute{ position: absolute;}
+        .relative{ position: relative;}
+        .fixed{ position: fixed;}
+        .top{ top: 0;}
+        .left{left: 0;}
+        .right{right: 0;}
+        .bottom{ bottom: 0;}
+        .center{left: 50%;top: 50%; transform: translate(-50%,-50%);}
+        .blue{background-color: blue;}
+        .yellow{background-color: yellow;}
+        .red{background-color: red;}
+        .green{background-color: green;}
+        .pink{background-color: pink;}
+        .white{background-color: white;}
+    </style>
+</head>
+<body>
+    <div class="absolute small red top left"></div>
+    <div class="absolute small green top right"></div>
+    <div class="absolute small blue bottom left"></div>
+    <div class="absolute small yellow bottom right"></div>
+    <div class="fixed big white center">
+        <div class="absolute inside red top left"></div>
+        <div class="absolute inside green top right"></div>
+        <div class="absolute inside blue bottom left"></div>
+        <div class="absolute inside yellow bottom right"></div>
+        <div class="absolute inside pink center"></div>
+    </div>
+</body>
+</html>

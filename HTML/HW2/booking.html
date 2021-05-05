@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    table {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 5px;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <form action="/action_page.php">
+      <table>
+        <tr>
+          <th colspan="2">Flying From</th>
+          <th colspan="2">to</th>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <select id="Flying_from" name="Flying_from">
+              <option value="don_muang_airport">Donmuang</option>
+              <option value="Suvarnabhumi_Airport">Suvarnabhumi</option>
+            </select>
+          </td>
+          <td colspan="2">
+
+            <select id="To" name="To">
+              <option value="Incheon_airport">Incheon</option>
+              <option value="tokyo_airport">Tokyo</option>
+              <option value="Alaska_airport">Alaska</option>
+              <option value="Auckland_airport">Auckland</option>
+            </select>
+
+          </td>
+        </tr>
+        <tr>
+          <th colspan="2">Departing</th>
+          <th colspan="2">Returning</th>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <form action="/action_page.php">
+              <input type="date" id="Departing" name="Departing">
+
+          </td>
+          <td colspan="2">
+            <form action="/action_page.php">
+              <input type="date" id="Returning" name="Returning">
+          </td>
+        </tr>
+        <tr>
+          <th>Adult</th>
+          <th>Child</th>
+          <th>Infant</th>
+          <th style="color:red;">Currency</th>
+        </tr>
+        <tr>
+          <td>
+            <input type="number" id="Adult" name="Adult	" min="1" max="10">
+          </td>
+          <td>
+            <input type="number" id="Child" name="Child" min="1" max="10">
+          </td>
+          <td>
+            <input type="number" id="Infant" name="Infant" min="1" max="10">
+          </td>
+          <td>
+            <select id="Currency" name="Currency">
+              <option value="Thaibath">THB</option>
+              <option value="Dollar">USD</option>
+              <option value="Bitcoin">BTC</option>
+              <option value="Ethereum">ETH</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4"><button type="button">Search</button></td>
+        </tr>
+      </table>
+    </form>
+  </center>
+</body>
+
+</html>

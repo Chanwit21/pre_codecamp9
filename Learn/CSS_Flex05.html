@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex03</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .flex-containner{
+            display: flex;
+            align-items: flex-start;
+            height: 80vh;
+            width: 80vw;
+            background-color: blueviolet;
+            margin: 10vh auto;
+            flex-direction: row  ;
+
+        }
+        .flex-containner > *  {
+            background-color: yellow;
+            margin: 5px;
+            padding: 20px;
+            font-size: 30px;
+            flex:1 1 20%;
+
+        }
+        .item3{
+            align-self: flex-end;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-containner">
+        <div class="item1">01</div>
+        <div class="item2">02</div>
+        <div class="item3">03</div>
+        <div class="item4">04</div>
+        <div class="item5">05</div>
+    </div>
+</body>
+</html>

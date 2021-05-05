@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex07</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        header {
+            background-color: red;
+            height: 10vh;
+        }
+
+        main {
+            background-color: teal;
+            height: 80vh;
+            display: flex;
+        }
+
+        main>* {
+            outline: 1px dashed lime;
+            flex: 1;
+        }
+
+        .main-C {
+            flex-grow: 5;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        footer {
+            background-color: tomato;
+            height: 10vh;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Header</header>
+    <main>
+        <div class="main-L">Left</div>
+        <div class="main-C">
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita totam quisquam explicabo unde harum!
+                Iure iusto adipisci labore a, repudiandae rerum doloribus facere ab nam in dolorum mollitia debitis
+                doloremque, deserunt, dolorem ipsa? Suscipit minima officiis repudiandae cumque assumenda placeat ipsam
+                explicabo eum autem ad? Neque officia voluptas perferendis ullam.</p>
+        </div>
+        <div class="main-R">Right</div>
+    </main>
+    <footer>Footer</footer>
+</body>
+
+</html>

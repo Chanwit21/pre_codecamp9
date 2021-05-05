@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex02</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .flex-containner{
+            display: flex;
+            /* flex-flow: column-reverse wrap-reverse; */
+            flex-direction: row;
+            align-items: flex-start;
+            align-content: flex-start ; 
+            justify-content:center;
+            flex-wrap: wrap;
+            height: 80vh;
+            width: 80vw;
+            background-color: blueviolet;
+            margin: 10vh auto;
+
+        }
+        .flex-containner > *{
+            background-color: yellow;
+            margin: 5px;
+            padding: 20px;
+            font-size: 30px;
+            line-height: 50px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-containner">
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item3">03</div>
+        <div class="item">04</div>
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item3">03</div>
+        <div class="item">04</div>
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item3">03</div>
+        <div class="item">04</div>
+    </div>
+</body>
+</html>
