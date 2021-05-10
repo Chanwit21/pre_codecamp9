@@ -1,0 +1,17 @@
+console.log("Exercise Arrow Function")
+
+console.log("1.แปลง function ข้างล่างให้อยู่ในรูป arrow function")
+console.log("function ask(question, yes, no) {")
+console.log("    if (confirm(question)) yes()")
+console.log("    else no();")
+console.log("  }")
+console.log("  ")
+console.log("  ask(")
+console.log("    \"Do you agree?\",")
+console.log("    function() { alert(\"You agreed.\"); },")
+console.log("    function() { alert(\"You canceled the execution.\"); }")
+console.log("  );  ")
+let ask = (question, yes, no) => (confirm(question))? yes():no();
+let agreed = () => alert("You agreed.") 
+let canceled = () => alert("You canceled the execution.") 
+ask("Do you agree?",agreed,canceled)
