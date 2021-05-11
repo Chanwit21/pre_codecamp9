@@ -24,5 +24,5 @@ function draw(n) {
     }
 }
 
-let a = +prompt("Input Your Number :");
+let a = +prompt("Input Your Number in range 1-73 :");
 draw(a);
