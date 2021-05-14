@@ -13,7 +13,7 @@ function makeUser() {
   return {
     name: "John",
     ref: this
-  };s
+  };
 };
 
 let user = makeUser();
