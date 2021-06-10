@@ -1,7 +1,5 @@
 console.log("Exercise Methods ของ Array ");
-// console.log(
-//   "1.ให้สร้าง array2 จาก array1 ตามที่โจทย์กำหนด โดยใช้ฟังก์ชัน Array.map()"
-// );
+console.log("1.ให้สร้าง array2 จาก array1 ตามที่โจทย์กำหนด โดยใช้ฟังก์ชัน Array.map()");
 
 // console.log("1.1   array1 = [1, 2, 30, 400]")
 // console.log("      array2 [2, 4, 60, 800]")
@@ -96,26 +94,27 @@ console.log("Exercise Methods ของ Array ");
 // })
 // console.log(array2)
 
-// console.log("1.11 array1 = [")
-// console.log("       { name: \"apple\", birth: \"2000-01-01\" },")
-// console.log("       { name: \"banana\", birth: \"1990-10-01\" },")
-// console.log("       { name: \"watermelon\", birth: \"1985-12-01\" },")
-// console.log("     ]")
-// console.log("     array2 [")
-// console.log("       { name: \"apple\", birth: \"2000-01-01\", age: 19 },")
-// console.log("       { name: \"banana\", birth: \"1990-10-01\", age: 29 },")
-// console.log("       { name: \"watermelon\", birth: \"1985-12-01\", age: 33 },")
-// console.log("     ]")
-// const array1 = [
-//   { name: "apple", birth: "2000-01-01" },
-//   { name: "banana", birth: "1990-10-01" },
-//   { name: "watermelon", birth: "1985-12-01" },
-// ];
-// let array2 = array1;
-// let array3 = array2.map(function(x) {
-//     return x.age = 2021 - x.birth.split("-",1)[0];
-// })
-// console.log(array2)
+console.log("1.11 array1 = [")
+console.log("       { name: \"apple\", birth: \"2000-01-01\" },")
+console.log("       { name: \"banana\", birth: \"1990-10-01\" },")
+console.log("       { name: \"watermelon\", birth: \"1985-12-01\" },")
+console.log("     ]")
+console.log("     array2 [")
+console.log("       { name: \"apple\", birth: \"2000-01-01\", age: 19 },")
+console.log("       { name: \"banana\", birth: \"1990-10-01\", age: 29 },")
+console.log("       { name: \"watermelon\", birth: \"1985-12-01\", age: 33 },")
+console.log("     ]")
+const array1 = [
+  { name: "apple", birth: "2000-01-01" },
+  { name: "banana", birth: "1990-10-01" },
+  { name: "watermelon", birth: "1985-12-01" },
+];
+let array2 = array1.map( x => Object.assign({},x)) //Copy Object ใน Array 1 มาไว้ที่ Array2 โดยที่แก้ไข Array2 Array1 จะไม่เปลี่ยน
+let array3 = array2.map(function(x) {
+    return x.age = 2021 - x.birth.split("-",1)[0];
+})
+console.log(array1)
+console.log(array2)
 
 // console.log("1.12 array1 = [")
 // console.log("       { name: \"apple\", birth: \"2000-01-01\" },")
@@ -179,8 +178,7 @@ console.log("Exercise Methods ของ Array ");
 // });
 // console.log(array2);
 
-
-console.log("2.ให้สร้าง array2 จาก array1 ตามที่โจทย์กำหนด โดยใช้ฟังก์ชัน Array.filter() ");
+// console.log("2.ให้สร้าง array2 จาก array1 ตามที่โจทย์กำหนด โดยใช้ฟังก์ชัน Array.filter() ");
 
 // console.log("2.1  array1 = [1, 2, 30, 400]")
 // console.log("     array2 [30, 400] // filter เลขที่มากกว่า 10")
@@ -323,21 +321,21 @@ console.log("2.ให้สร้าง array2 จาก array1 ตามที�
 // })
 // console.log(array2);
 
-console.log("2.12 array1 = [");
-console.log('   { name: "apple", birth: "2001-01-01" },');
-console.log('   { name: "banana", birth: "1990-10-10" },');
-console.log('   { name: "watermelon", birth: "1985-12-30" },');
-console.log('   { name: "peach", birth: "2002-10-13" },');
-console.log(" ]");
-console.log(" array2 [");
-console.log('   { name: "banana", birth: "1990-10-10" },');
-console.log('   { name: "watermelon", birth: "1985-12-30" },');
-console.log(" ] // filter คนเกิดก่อนปี 2000");
-const array1 = [
-  { name: "apple", birth: "2001-01-01" },
-  { name: "banana", birth: "1990-10-10" },
-  { name: "watermelon", birth: "1985-12-30" },
-  { name: "peach", birth: "2002-10-13" },
-];
-let array2 = array1.filter( x => x.birth.split('-')[0] <= 2000)
-console.log(array2);
+// console.log("2.12 array1 = [");
+// console.log('   { name: "apple", birth: "2001-01-01" },');
+// console.log('   { name: "banana", birth: "1990-10-10" },');
+// console.log('   { name: "watermelon", birth: "1985-12-30" },');
+// console.log('   { name: "peach", birth: "2002-10-13" },');
+// console.log(" ]");
+// console.log(" array2 [");
+// console.log('   { name: "banana", birth: "1990-10-10" },');
+// console.log('   { name: "watermelon", birth: "1985-12-30" },');
+// console.log(" ] // filter คนเกิดก่อนปี 2000");
+// const array1 = [
+//   { name: "apple", birth: "2001-01-01" },
+//   { name: "banana", birth: "1990-10-10" },
+//   { name: "watermelon", birth: "1985-12-30" },
+//   { name: "peach", birth: "2002-10-13" },
+// ];
+// let array2 = array1.filter( x => x.birth.split('-')[0] <= 2000)
+// console.log(array2);
