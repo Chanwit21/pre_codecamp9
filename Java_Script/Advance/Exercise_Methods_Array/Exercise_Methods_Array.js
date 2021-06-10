@@ -179,9 +179,8 @@ console.log("Exercise Methods ของ Array ");
 // });
 // console.log(array2);
 
-console.log(
-  "2.ให้สร้าง array2 จาก array1 ตามที่โจทย์กำหนด โดยใช้ฟังก์ชัน Array.filter() "
-);
+
+console.log("2.ให้สร้าง array2 จาก array1 ตามที่โจทย์กำหนด โดยใช้ฟังก์ชัน Array.filter() ");
 
 // console.log("2.1  array1 = [1, 2, 30, 400]")
 // console.log("     array2 [30, 400] // filter เลขที่มากกว่า 10")
