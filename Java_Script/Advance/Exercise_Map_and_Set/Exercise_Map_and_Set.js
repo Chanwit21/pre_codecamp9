@@ -53,6 +53,7 @@ function aclean(arr) {
         count = count + 1;
       }
       if (count > 1) {      //ถ้าเจอตัวซ้ำค่า Count จะเท่ากับ 2 ให้ทำการลบออก 
+        console.log(`${key1} is Deleted.`)
         map.delete(key1);
         count = count - 1;  //เมื่อลบออกแล้วต้องลบค่า Count ออกด้วยเพราะว่าได้ลบตัวที่เจอออกไปแล้ว
       }
