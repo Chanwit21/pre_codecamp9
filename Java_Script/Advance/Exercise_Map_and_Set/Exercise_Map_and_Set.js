@@ -19,7 +19,7 @@ console.log("Exercise Map และ Set ");
 let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
 
 function aclean(arr) {
-  // สร้าง map ไว้เพื่อสร้าง key ที่เป็นค่าของ Array ที่ใส่ใน input 
+  // สร้าง map ไว้เพื่อสร้าง key ที่เป็นค่าของ Array ที่ใส่ใน input
   let map = new Map();
   // สร้าง array เพื่อ ทำ Output จาก Map ที่ Clean แล้ว
   let array = new Array();
@@ -49,13 +49,15 @@ function aclean(arr) {
     let count = 0;
     map.forEach(function (value1, key1) {
       let bool = eqSet(value, value1);
-      if (bool == true) {   //ถ้าเจอตัวที่เหมือนกันให้นับเพิ่มว่าเจอแล้ว
+      if (bool == true) {
+        //ถ้าเจอตัวที่เหมือนกันให้นับเพิ่มว่าเจอแล้ว
         count = count + 1;
       }
-      if (count > 1) {      //ถ้าเจอตัวซ้ำค่า Count จะเท่ากับ 2 ให้ทำการลบออก 
-        console.log(`${key1} is Deleted.`)
+      if (count > 1) {
+        //ถ้าเจอตัวซ้ำค่า Count จะเท่ากับ 2 ให้ทำการลบออก
+        console.log(`${key1} is Deleted.`);
         map.delete(key1);
-        count = count - 1;  //เมื่อลบออกแล้วต้องลบค่า Count ออกด้วยเพราะว่าได้ลบตัวที่เจอออกไปแล้ว
+        count = count - 1; //เมื่อลบออกแล้วต้องลบค่า Count ออกด้วยเพราะว่าได้ลบตัวที่เจอออกไปแล้ว
       }
       // console.log(`value = ${value}, value1 = ${value1},bool = ${bool},count = ${count}`);
       // console.log(`key = ${key}, key1 = ${key1},bool = ${bool},count = ${count}`);
@@ -81,7 +83,6 @@ function aclean(arr) {
 // map.set("name", "BOMB");
 // map.set("age", 18);
 // map.set("pet", "cat");
-
 
 // // สร้าง Map ขึ้นมาเพื่อรองรับค่า key ที่ได้จาก map ตัวเก่า แลัรับค่า key ที่ได้จากการ Push เข้ามา
 // let keyMap = new Map()
