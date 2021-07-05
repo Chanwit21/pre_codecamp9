@@ -102,7 +102,7 @@ class RegisterForm extends Component {
     return (
       <div className="RegisterForm" onSubmit={this.onSubmitForm}>
         <form>
-            //attribute ที่อยู่ใน <Input /> จะถูกส่งข้อมูลเป็น Object ผ่าน props ไปให้อีกไฟล์นึงที่เป็นต้นทางของ Input
+            {/* //attribute ที่อยู่ใน <Input /> จะถูกส่งข้อมูลเป็น Object ผ่าน props ไปให้อีกไฟล์นึงที่เป็นต้นทางของ Input */}
           <Input
             onChangeInput={this.onChangeInput}
             value={name.value}
