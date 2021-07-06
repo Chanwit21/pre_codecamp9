@@ -54,7 +54,7 @@ export const TodoList = () => {
             <div>
                 <h3>TodoList</h3>
                 <ul style={{ listStyle: "none" }}>
-                    {list.map(((text, index) => <li key={index}>{text} <span onClick={() => handleDone(index)}><img src={arrow} style={{ width: "15px", verticalAlign: "bottom" }} /></span> </li>))}
+                    {list.map(((text, index) => <li key={index}> {text} <span onClick={(e) => handleDone(index)}><img src={arrow} style={{ width: "15px", verticalAlign: "bottom" }} /></span> </li>))}
                 </ul>
                 <div>
                     <input type="text" value={text} onChange={(e) => textUpdate(e.target.value)} />

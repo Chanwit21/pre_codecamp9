@@ -1,0 +1,29 @@
+.section {
+  display: flex;
+}
+.toDo {
+  width: 300px;
+  height: 500px;
+  background-color: red;
+  text-align: center;
+}
+
+.done {
+  width: 300px;
+  height: 500px;
+  background-color: blue;
+  text-align: center;
+}
+
+#flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#flex-container > .flex-item {
+  flex: auto;
+}
+
+#flex-container > .raw-item {
+  width: 5rem;
+}
