@@ -5,6 +5,7 @@ function Todo() {
   const [toDoList, setToDoList] = useState([]);
   const [text, setText] = useState("");
   const [doneList, setDoneList] = useState([]);
+  const [doing,setDoing] = useState([]);
 
   const addToDo = () => {
     setToDoList([...toDoList, text]);
@@ -12,15 +13,21 @@ function Todo() {
   };
 
   const isDoneToDo = (index) => {
-    let move = toDoList.splice(index, 1);
+    let move = doing.splice(index, 1);
     setDoneList([...doneList, move]);
-    setToDoList([...toDoList]);
+    setDoing([...doing]);
   };
 
   const deleteList = (index) => {
     doneList.splice(index, 1);
     setDoneList([...doneList]);
   };
+
+  const isDoing = (index) => {
+    let move = toDoList.splice(index,1);
+    setDoing([...doing,move]);
+    setToDoList([...toDoList])
+  }
 
   return (
     <html lang="en">
@@ -37,7 +44,7 @@ function Todo() {
                 {toDoList.map((value, index) => (
                   <li style={{zIndex:1}}>
                     {value}
-                    <button onClick={() => isDoneToDo()}>Done</button>
+                    <button onClick={() => isDoing(index)}>Doing</button>
                   </li>
                 ))}
               </ul>
@@ -51,6 +58,12 @@ function Todo() {
               />
               <button onClick={addToDo}>Add</button>
             </div>
+          </div>
+          <div className="doing">
+            <h1>Doing:</h1>
+            <ul style={{listStyle:"none"}}>
+            {doing.map((value,index)=><li>{value}<button onClick={()=>isDoneToDo(index)}>Done</button></li>)}
+            </ul>
           </div>
           <div
             className="done"

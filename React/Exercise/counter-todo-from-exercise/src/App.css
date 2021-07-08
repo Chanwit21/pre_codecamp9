@@ -43,29 +43,38 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 }
 
 .toDo {
-    width: 300px;
-    height: 500px;
-    background: rgb(10, 248, 177);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
+  width: 300px;
+  height: 500px;
+  background: rgb(10, 248, 177);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
 }
 
 .done {
   width: 300px;
-    height: 500px;
-    background: rgb(10, 248, 30);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+  height: 500px;
+  background: rgb(10, 248, 30);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 .addTodo {
   margin-top: auto;
+}
+
+.doing {
+  width: 300px;
+  height: 500px;
+  background: rgb(10, 220, 248);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 /* From */
@@ -92,7 +101,7 @@
 }
 
 .Success {
-  color: #5C9210;
+  color: #5c9210;
 }
 
 .Danger {
@@ -149,6 +158,6 @@
 
 @media (min-width: 600px) {
   .RegisterForm {
-      width: 500px;
+    width: 500px;
   }
 }
