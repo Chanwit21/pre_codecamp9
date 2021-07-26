@@ -2,7 +2,6 @@
 const os = require("os");
 // file
 const fs = require("fs");
-const { ok } = require("assert");
 
 // tmem = os.totalmem()
 // fmem = os.freemem()
@@ -185,24 +184,70 @@ const { ok } = require("assert");
 //     return getFile(data)})
 
 // Promist CAllback Function
-function readMessage() {
-  return new Promise(function (fulfill, reject) {
-    fs.readFile("message.txt", "utf8", function (err, res) {
-      if (err) reject(err);
-      else fulfill(res);
-    });
-  });
-}
-function writeMessage(dat) {
-  return new Promise(function (fulfill, reject) {
-    fs.writeFile("out.txt", dat, function (err) {
-      if (err) reject(err);
-      else fulfill(res);
-    });
-  });
-}
-readMessage()
-  .then(writeMessage)
-  .then(function () {
-    console.log("success");
-  });
+// function readMessage() {
+//   return new Promise(function (fulfill, reject) {
+//     fs.readFile("message.txt", "utf8", function (err, res) {
+//       if (err) reject(err);
+//       else fulfill(res);
+//     });
+//   });
+// }
+// function writeMessage(dat) {
+//   return new Promise(function (fulfill, reject) {
+//     fs.writeFile("out.txt", dat, function (err) {
+//       if (err) reject(err);
+//       else fulfill(res);
+//     });
+//   });
+// }
+// readMessage()
+//   .then(writeMessage)
+//   .then(function () {
+//     console.log("success");
+//   });
+
+// async awiat
+// let done = false;
+
+// const isItDoneYet = new Promise((resolve, reject) => {
+//   if (done) {
+//     const workDone = "Here is the thing I built";
+//     resolve(workDone);
+//   } else {
+//     const why = "Still working on something else";
+//     reject(why);
+//   }
+// });
+
+// async function checkIfItDone() {
+//   try {
+//     const d = await isItDoneYet;
+//     console.log(d);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
+
+// checkIfItDone()
+
+// function showText(text, time) {
+//   return new Promise((reslove) => {
+//     console.log(text);
+//     setTimeout(() => reslove(), time);
+//   });
+// }
+
+// async function runInText() {
+//   try {
+//     await showText("1", 1000);
+//     await showText("2", 1000);
+//     await showText("3", 1000);
+//     await showText("4", 1000);
+//     console.log("Done....");
+//   } catch(err) {
+//     console.log(err)
+//   }
+// }
+
+// console.log('Start .....')
+// runInText()
