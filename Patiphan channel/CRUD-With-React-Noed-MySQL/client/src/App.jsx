@@ -17,6 +17,7 @@ function App() {
     });
   };
 
+  // ถ้าส่งไปให้สำเร็จจะทำ then ต่อ
   const addEmployee = () => {
     Axios.post("http://localhost:3001/create", {
       name: name,
@@ -25,7 +26,7 @@ function App() {
       position: position,
       wage: wage,
     }).then(() => {
-      [
+      setEmployeeList([
         ...employeeList,
         {
           name: name,
@@ -34,7 +35,7 @@ function App() {
           position: position,
           wage: wage,
         },
-      ];
+      ]);
     });
   };
 
