@@ -59,6 +59,7 @@ function App() {
     ).catch(err => {
       console.log(err)
     })
+    document.getElementById(`id-${id}`).value = '';
   };
 
   const deleteEmployee = (id) => {
@@ -157,10 +158,10 @@ function App() {
                       style={{ width: "300px" }}
                       placeholder="150000...."
                       className="form-control"
-                      value={newWage}
                       onChange={(e) => {
                         setNewWage(e.target.value);
                       }}
+                      id = {`id-${val.id}`}
                     />
                     <button
                       className="btn btn-warning"
