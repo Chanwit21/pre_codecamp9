@@ -1,0 +1,15 @@
+{
+  "name": "ht",
+  "version": "1.0.0",
+  "description": "",
+  "main": "http-basic1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon http-res.js" 
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
