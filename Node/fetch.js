@@ -42,18 +42,18 @@ const fetch = require("node-fetch");
 // runFetch()
 
 // IIFE ANd refactor
-// let url = 'https://covid19.th-stat.com/json/covid19v2/getTodayCases.json'
-// let d
-// (async () => {
-//   try {
-//     const res = await fetch(url)
-//     d = await res.json();
-//     console.log(d)
-//     console.log(res)
-//   } catch (err) {
-//     console.log(err)
-//   }
-// })()
+let url = 'https://covid19.th-stat.com/json/covid19v2/getTodayCases.json'
+let d
+(async () => {
+  try {
+    const res = await fetch(url)
+    d = await res.json();
+    console.log(d)
+    console.log(res)
+  } catch (err) {
+    console.log(err)
+  }
+})()
 
 // Async  Fetch And Edit DOM
 // function addTag(label, content) {
@@ -77,24 +77,24 @@ const fetch = require("node-fetch");
 //     console.log(err)
 //   }
 // })()
-let d = {
-  Confirmed: 512678,
-  Recovered: 341475,
-  Hospitalized: 167057,
-  Deaths: 4146,
-  NewConfirmed: 15376,
-  NewRecovered: 6782,
-  NewHospitalized: 8507,
-  NewDeaths: 87,
-  UpdateDate: '26/07/2021 12:30',
-  DevBy: 'https://www.kidkarnmai.com/'
-}
+// let d = {
+//   Confirmed: 512678,
+//   Recovered: 341475,
+//   Hospitalized: 167057,
+//   Deaths: 4146,
+//   NewConfirmed: 15376,
+//   NewRecovered: 6782,
+//   NewHospitalized: 8507,
+//   NewDeaths: 87,
+//   UpdateDate: '26/07/2021 12:30',
+//   DevBy: 'https://www.kidkarnmai.com/'
+// }
 
-console.log(d)
+// console.log(d)
 
-for(let [key,value] of Object.entries(d)) {
-  addTag(key, value)
-}
+// for(let [key,value] of Object.entries(d)) {
+//   addTag(key, value)
+// }
 
 // // Exercise
 // async function getUser() {
