@@ -14,6 +14,7 @@ function App() {
   const getEmployee = () => {
     Axios.get("http://localhost:3001/employee").then(res => {
       setEmployeeList(res.data);
+      console.log(employeeList);
     });
   };
 
