@@ -2,7 +2,7 @@
   "development": {
     "username": "cc9",
     "password": "root-bomb-cc9",
-    "database": "database-bank-system",
+    "database": "sequelize-learn-todo",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
