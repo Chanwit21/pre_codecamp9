@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import Axios from "axios";
+import React, { useState } from 'react';
+import Axios from 'axios';
 
 function App() {
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
   const [age, setAge] = useState(0);
-  const [country, setCountry] = useState("");
-  const [position, setPosition] = useState("");
+  const [country, setCountry] = useState('');
+  const [position, setPosition] = useState('');
   const [wage, setWage] = useState(0);
   const [newWage, setNewWage] = useState(0);
 
   const [employeeList, setEmployeeList] = useState([]);
 
   const getEmployee = () => {
-    Axios.get("http://localhost:3001/employee").then(res => {
+    Axios.get('http://localhost:3001/employee').then((res) => {
       setEmployeeList(res.data);
       console.log(employeeList);
     });
@@ -20,7 +20,7 @@ function App() {
 
   // ถ้าส่งไปให้สำเร็จจะทำ then ต่อ
   const addEmployee = () => {
-    Axios.post("http://localhost:3001/create", {
+    Axios.post('http://localhost:3001/create', {
       name: name,
       age: age,
       country: country,
@@ -40,11 +40,11 @@ function App() {
     });
   };
 
-  const updateEmployeeWage = id => {
-    Axios.put("http://localhost:3001/update", { wage: newWage, id: id })
-      .then(res => {
+  const updateEmployeeWage = (id) => {
+    Axios.put('http://localhost:3001/update', { wage: newWage, id: id })
+      .then((res) => {
         setEmployeeList(
-          employeeList.map(val => {
+          employeeList.map((val) => {
             return val.id === id
               ? {
                   id: val.id,
@@ -57,17 +57,17 @@ function App() {
               : val;
           })
         );
-        setNewWage("");
+        setNewWage('');
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
       });
-    document.getElementById(`id-${id}`).value = "";
+    document.getElementById(`id-${id}`).value = '';
   };
 
-  const deleteEmployee = id => {
-    Axios.delete(`http://localhost:3001/delete/${id}`).then(res => {
-      setEmployeeList(employeeList.filter(val => val.id !== id));
+  const deleteEmployee = (id) => {
+    Axios.delete(`http://localhost:3001/delete/${id}`).then((res) => {
+      setEmployeeList(employeeList.filter((val) => val.id !== id));
     });
   };
 
@@ -84,7 +84,7 @@ function App() {
               type="text"
               className="form-control"
               placeholder="Enter Name..."
-              onChange={e => {
+              onChange={(e) => {
                 setName(e.target.value);
               }}
             />
@@ -95,7 +95,7 @@ function App() {
               type="number"
               className="form-control"
               placeholder="Enter Age..."
-              onChange={e => {
+              onChange={(e) => {
                 setAge(e.target.value);
               }}
             />
@@ -106,7 +106,7 @@ function App() {
               type="text"
               className="form-control"
               placeholder="Enter Country..."
-              onChange={e => {
+              onChange={(e) => {
                 setCountry(e.target.value);
               }}
             />
@@ -117,7 +117,7 @@ function App() {
               type="text"
               className="form-control"
               placeholder="Enter Position..."
-              onChange={e => {
+              onChange={(e) => {
                 setPosition(e.target.value);
               }}
             />
@@ -128,7 +128,7 @@ function App() {
               type="number"
               className="form-control"
               placeholder="Enter Wage..."
-              onChange={e => {
+              onChange={(e) => {
                 setWage(e.target.value);
               }}
             />
@@ -143,7 +143,7 @@ function App() {
         <button className="btn btn-primary" onClick={getEmployee}>
           Show employees
         </button>
-        <div style={{ marginTop: "30px" }}>
+        <div style={{ marginTop: '30px' }}>
           {employeeList.map((val, key) => {
             return (
               <div className="employee card">
@@ -156,10 +156,10 @@ function App() {
                   <div className="d-flex">
                     <input
                       type="number"
-                      style={{ width: "300px" }}
+                      style={{ width: '300px' }}
                       placeholder="150000...."
                       className="form-control"
-                      onChange={e => {
+                      onChange={(e) => {
                         setNewWage(e.target.value);
                       }}
                       id={`id-${val.id}`}

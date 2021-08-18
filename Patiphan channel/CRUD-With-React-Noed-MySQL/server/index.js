@@ -1,20 +1,20 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const mysql = require("mysql");
-const cors = require("cors");
+const mysql = require('mysql');
+const cors = require('cors');
 
 app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-  user: "root",
-  host: "localhost",
-  password: "rootBOMB",
-  database: "employeeSystem",
+  user: 'cc9',
+  host: 'localhost',
+  password: 'root-bomb-cc9',
+  database: 'employee_system',
 });
 
-app.get("/employee", (req, res) => {
-  db.query("SELECT * FROM employee", (err, result) => {
+app.get('/employee', (req, res) => {
+  db.query('SELECT * FROM employee', (err, result) => {
     if (err) {
       console.log(err);
     } else {
@@ -23,7 +23,7 @@ app.get("/employee", (req, res) => {
   });
 });
 
-app.post("/create", (req, res) => {
+app.post('/create', (req, res) => {
   const name = req.body.name;
   const age = req.body.age;
   const country = req.body.country;
@@ -31,24 +31,24 @@ app.post("/create", (req, res) => {
   const wage = req.body.wage;
 
   db.query(
-    "INSERT INTO employee (name, age, country, position, wage) VALUE(?,?,?,?,?)",
+    'INSERT INTO employee (name, age, country, position, wage) VALUE(?,?,?,?,?)',
     [name, age, country, position, wage],
     (err, result) => {
       if (err) {
         console.log(err);
       } else {
-        res.send("Value inserted");
+        res.send('Value inserted');
       }
     }
   );
 });
 
-app.put("/update", (req, res) => {
+app.put('/update', (req, res) => {
   const id = req.body.id;
   const wage = req.body.wage;
 
   db.query(
-    "UPDATE employee SET wage = ? WHERE id = ?",
+    'UPDATE employee SET wage = ? WHERE id = ?',
     [wage, id],
     (err, result) => {
       if (err) {
@@ -60,9 +60,9 @@ app.put("/update", (req, res) => {
   );
 });
 
-app.delete("/delete/:id", (req, res) => {
+app.delete('/delete/:id', (req, res) => {
   const id = req.params.id;
-  db.query("DELETE FROM employee WHERE id = ?", id, (err, result) => {
+  db.query('DELETE FROM employee WHERE id = ?', id, (err, result) => {
     if (err) {
       console.log(err);
     } else {
@@ -71,6 +71,6 @@ app.delete("/delete/:id", (req, res) => {
   });
 });
 
-app.listen("3001", () => {
-  console.log("Server is running on port 3001");
+app.listen('3001', () => {
+  console.log('Server is running on port 3001');
 });
