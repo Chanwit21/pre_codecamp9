@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import './chat.scss';
 import { to_Decrypt, to_Encrypt } from '../aes.js';
 import { process } from '../store/action/index';
