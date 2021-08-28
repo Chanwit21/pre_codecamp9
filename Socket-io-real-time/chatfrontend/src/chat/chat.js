@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import './chat.scss';
 import { to_Decrypt, to_Encrypt } from '../aes.js';
 import { process } from '../store/action/index';
@@ -11,25 +10,35 @@ function Chat({ username, roomname, socket }) {
 
   const dispatch = useDispatch();
 
-  const dispatchProcess = (encrypt, msg, cipher) => {
-    dispatch(process(encrypt, msg, cipher));
-  };
-
   useEffect(() => {
+    function dispatchProcess(encrypt, msg, cipher) {
+      dispatch(process(encrypt, msg, cipher));
+    }
+
     socket.on('message', data => {
       //decypt the message
       const ans = to_Decrypt(data.text, data.username);
       dispatchProcess(false, ans, data.text);
       console.log(ans);
-      let temp = messages;
-      temp.push({
-        userId: data.userId,
-        username: data.username,
-        text: ans,
+      // let temp = [...messages];
+      // temp.push({
+      //   userId: data.userId,
+      //   username: data.username,
+      //   text: ans,
+      // });
+      // setMessages(temp);
+      //  My Refactor setMessage
+      setMessages(current => {
+        const newMessage = [...current];
+        newMessage.push({
+          userId: data.userId,
+          username: data.username,
+          text: ans,
+        });
+        return newMessage;
       });
-      setMessages([...temp]);
     });
-  }, [socket]);
+  }, [socket, dispatch]);
 
   const sendData = () => {
     if (text !== '') {
@@ -39,6 +48,7 @@ function Chat({ username, roomname, socket }) {
       setText('');
     }
   };
+
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -60,14 +70,14 @@ function Chat({ username, roomname, socket }) {
         {messages.map(i => {
           if (i.username !== username) {
             return (
-              <div className="message">
+              <div className="message" key={i.userId}>
                 <p>{i.text}</p>
                 <span>{i.username}</span>
               </div>
             );
           } else {
             return (
-              <div className="message mess-right">
+              <div className="message mess-right" key={i.userId}>
                 <p>{i.text} </p>
                 <span>{i.username}</span>
               </div>

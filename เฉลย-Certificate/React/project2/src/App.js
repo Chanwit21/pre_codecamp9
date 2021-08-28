@@ -10,17 +10,19 @@ function App() {
 
   const API = 'https://api.github.com/';
 
-  const fetchSearch = (username) => {
+  const fetchSearch = username => {
+    console.log(username);
     let url = `${API}search/users?q=${username}`;
     fetch(url)
-      .then((res) => {
+      .then(res => {
         console.log(res);
         return res.json();
       })
-      .then((data) => {
+      .then(data => {
         setData(data);
+        console.log(data);
       })
-      .catch((error) => console.log('Oops! . There Is A Problem' + error));
+      .catch(error => console.log('Oops! . There Is A Problem' + error));
   };
 
   useEffect(() => {

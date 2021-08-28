@@ -1,5 +1,5 @@
-const { Sequelize } = require("../models");
-const db = require("../models");
+const { Sequelize } = require('../models');
+const db = require('../models');
 const Op = Sequelize.Op;
 
 const getAllManagers = async (req, res) => {

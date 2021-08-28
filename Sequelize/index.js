@@ -19,6 +19,6 @@ app.use("/customers", customerRoutes);
 
 db.sequelize.sync({ force: false }).then(() => {
   app.listen(8000, () => {
-    console.log("Server is Rinning at port 8000");
+    console.log("Server is Running at port 8000");
   });
 });
