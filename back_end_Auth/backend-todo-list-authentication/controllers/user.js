@@ -33,7 +33,8 @@ const loginUser = async (req, res) => {
         name: targetUser.name,
         id: targetUser.id,
       };
-      const token = jwt.sign(payload, 'c0dEc4MP', { expiresIn: 3600 });
+      const secretKey = process.env.SECRET_OR_KEY;
+      const token = jwt.sign(payload, secretKey, { expiresIn: 3600 });
       res.status(200).send({ token: token, message: 'Login Successful.' });
     } else {
       res.status(400).send({ message: 'Username or password is wrong' });
