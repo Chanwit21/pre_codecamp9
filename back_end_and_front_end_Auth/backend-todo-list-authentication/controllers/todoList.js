@@ -15,6 +15,7 @@ const addTodoList = async (req, res) => {
 };
 
 const deleteTodoList = async (req, res) => {
+  // req.user.id มาจาก passport
   const targetId = Number(req.params.id);
   const targetTodo = await db.TodoList.findOne({ where: { id: targetId, user_id: req.user.id } });
   if (targetTodo) {
